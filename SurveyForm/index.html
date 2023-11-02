@@ -12,14 +12,47 @@
       <form id='survey-form'>
         <fieldset class='fieldset'>
           <label for='name'>Name<input id='name' type='text' placeholder='Enter your name'/></label>
-          <label for='email'>Email<input id='email' type='email' placeholder='Enter your Email'/>
+          <label for='email'>Email<input id='email' type='email' placeholder='Enter your Email'/></label>
           <label for='age'>Age (optional)<input id='age' type='text' placeholder='Age'/></label>
           <label for='role'>Which option best describes your current role?<input id='role' type='text'/></label>
-          <label for='recommendation'>Would you recommend freeCodeCamp to a friend?<input id='recommendation' type='text' placeholder='Age'/></label>
-          <label for='feature'>What is your favorite feature of freeCodeCamp?<input id='feature' type='text' placeholder='Age'/></label>
-          <label for='improvements'>What would you like to see improved? (Check all that apply) <input id='improvements' type='text' placeholder='Age'/></label>
-          <label for='comments'>Any comments or suggestions?<input id='comments' type='text' placeholder='Age'/></label>
-          <label for='submit'><input id='submit' type='submit' value='Submit'/></label>
+          <div>
+            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <label for='recommendation'><input id='recommendation' value="definetely" type="radio" checked=""/>Definetely</label>
+            <label for="recommendation"><input type="radio" value="maybe">Maybe</label>
+            <label for="recommendation"><input type="radio" value="not-sure">Not sure</label>
+          </div>
+          <div>
+            <p>What is your favorite feature of freeCodeCamp?</p>
+            <select name="mostLike" id="most-like" required="">
+              <option value="" selected="" disabled="">Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="community">Community</option>
+              <option value="openSource">Open Source</option>
+            </select>
+          </div>
+          <div>
+            <p>What would you like to see improved?<span>(Check all that apply)</span></p>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Front-end Projects</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Back-end Projects</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Data Visualization</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Challenges</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Open Source Community</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Gitter help rooms</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Videos</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>City Meetups</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Wiki</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Forum</label>
+            <label for='improvements'><input id='improvements' type='checkbox'/>Additional Courses</label>
+          </div>
+          <div>
+            <p>Any comments or suggestions?</p>
+            <textarea name="comments" id="comments" placeholder="Enter your comment here..."></textarea>
+          </div>
+          <div>
+            <button id='submit' type='submit'/>Submit</button>
+          </div>
+      </form>  
     </div>
   </body>
 </html>
